@@ -4,6 +4,7 @@
 git clone https://github.com/linkerd/linkerd-tcp.git
 cd linkerd-tcp
 cargo build
+cd -
 
 # get namerd
 version="1.0.2"
