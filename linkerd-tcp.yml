@@ -1,0 +1,17 @@
+admin:
+  ip: 0.0.0.0
+  port: 9989
+  metricsIntervalSecs: 10
+
+routers:
+  - label: echo
+    servers:
+    - ip: 0.0.0.0
+      port: 5555
+      dstName: /svc/echo
+    interpreter:
+      kind: io.l5d.namerd.http
+      baseUrl: http://localhost:4180
+      namespace: default
+      periodSecs: 20
+
