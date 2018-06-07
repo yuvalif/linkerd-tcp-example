@@ -1,4 +1,5 @@
 FROM fedora:27
+
 RUN dnf install -y java
 
 COPY linkerd-tcp/target/namerd-1.0.2-exec /

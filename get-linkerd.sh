@@ -1,8 +1,13 @@
 #!/bin/bash
 
 # get linkerd-tcp and build it
-git clone https://github.com/linkerd/linkerd-tcp.git
-cd linkerd-tcp
+if [ ! -d "linkerd-tcp" ]; then
+	git clone https://github.com/linkerd/linkerd-tcp.git
+	cd linkerd-tcp
+else
+	cd linkerd-tcp
+	git pull
+fi
 cargo build
 cd -
 
